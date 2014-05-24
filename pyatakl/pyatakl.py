@@ -8,9 +8,6 @@ import json
 
 # <codecell>
 
-
-# <codecell>
-
 atdat = requests.get('https://api.at.govt.nz/v1/public/display/parkinglocations?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd')
 
 # <codecell>
@@ -31,10 +28,44 @@ atlen = len(atres)
 
 # <codecell>
 
+class parks:
+    def getparks():
+        print dait
+
+# <codecell>
+
+mything = parks()
+
+# <codecell>
+
+mything.getparks()
 
 # <codecell>
 
 blen = atres[0:atlen]
+
+# <codecell>
+
+dait = atdict.items()
+
+# <codecell>
+
+
+# <codecell>
+
+savdict = open('/home/wcmckee/pyatakl/tests/presets/carparks.json', 'w')
+savdict.write(str(atdict))
+
+# <codecell>
+
+dait
+
+# <codecell>
+
+
+# <codecell>
+
+atdict.values()
 
 # <codecell>
 
