@@ -29,8 +29,8 @@ atlen = len(atres)
 # <codecell>
 
 class parks:
-    def getparks():
-        print dait
+    def getparks(self):
+        req = requests.get(str(self.url))
 
 # <codecell>
 
