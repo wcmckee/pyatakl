@@ -28,64 +28,86 @@ atlen = len(atres)
 
 # <codecell>
 
-class parks:
+class parks(object):
     def getparks(self):
-        req = requests.get(str(self.url))
+        return atres
+    
+    def items(self):
+        return atres[0]
+    
+    def getstatus(self):
+        print 'hello'
+        
+    def getaddr(self):
+        print ('test'.self)
 
 # <codecell>
 
-mything = parks()
+parks.getstatus()
 
 # <codecell>
 
-mything.getparks()
+#mything = parks()
 
 # <codecell>
 
-blen = atres[0:atlen]
+#for a in mything.getparks():
+ #   print a
 
 # <codecell>
 
-dait = atdict.items()
+#blen = atres[0:atlen]
 
 # <codecell>
 
+#dait = atdict.items()
 
 # <codecell>
 
-savdict = open('/home/wcmckee/pyatakl/tests/presets/carparks.json', 'w')
-savdict.write(str(atdict))
+#atdict.viewkeys()
 
 # <codecell>
 
-dait
-
-# <codecell>
-
-
-# <codecell>
-
-atdict.values()
-
-# <codecell>
-
-for d in blen:
-    print d['address']
-
-# <codecell>
-
-print atext
+#atrespon = atdict['response']
 
 # <codecell>
 
 
 # <codecell>
 
-atke
+#savdict = open('/home/wcmckee/pyatakl/tests/presets/carparks.json', 'w')
+#savdict.write(str(atdict))
 
 # <codecell>
 
-atkey.name
+#dait
+
+# <codecell>
+
+
+# <codecell>
+
+#atdict.values()
+
+# <codecell>
+
+#for d in blen:
+#    print d['address']
+
+# <codecell>
+
+#print atext
+
+# <codecell>
+
+
+# <codecell>
+
+#atke
+
+# <codecell>
+
+#atkey.name
 
 # <codecell>
 
