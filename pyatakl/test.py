@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
+# <markdowncell>
+
+# <h1>Hack Auckland - Auckland Transport</h1>
+
 # <codecell>
 
 import pyatakl
@@ -12,11 +16,23 @@ savpark = pyatakl.parks()
 
 # <codecell>
 
-savpark.getparks(.ipynb_checkpoints.ipynb_checkpoints.ipynb_checkpoints.ipynb_checkpoints
+savpark.
+
+# <codecell>
+
+savpark.items()
 
 # <codecell>
 
 savpark.getparks()
+
+# <codecell>
+
+savpark.getparks()
+
+# <codecell>
+
+savpark.ranpark()
 
 # <codecell>
 

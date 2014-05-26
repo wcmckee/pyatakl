@@ -5,6 +5,7 @@
 
 import requests
 import json
+import random
 
 # <codecell>
 
@@ -28,6 +29,17 @@ atlen = len(atres)
 
 # <codecell>
 
+ranpark = random.randint(0, atlen)
+
+# <codecell>
+
+
+# <codecell>
+
+testpark
+
+# <codecell>
+
 class parks(object):
     def getparks(self):
         return atres
@@ -35,15 +47,8 @@ class parks(object):
     def items(self):
         return atres[0]
     
-    def getstatus(self):
-        print 'hello'
-        
-    def getaddr(self):
-        print ('test'.self)
-
-# <codecell>
-
-parks.getstatus()
+    def ranpark(self):
+        return atres[ranpark]
 
 # <codecell>
 
@@ -56,7 +61,28 @@ parks.getstatus()
 
 # <codecell>
 
+test = parks()
+
+# <codecell>
+
 #blen = atres[0:atlen]
+
+# <codecell>
+
+ranitem = test.ranpark()
+
+# <codecell>
+
+thekeys = ranitem.keys()
+
+# <codecell>
+
+thekeys
+
+# <codecell>
+
+for kez in thekeys:
+    print kez
 
 # <codecell>
 
