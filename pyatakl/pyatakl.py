@@ -13,6 +13,42 @@ atdat = requests.get('https://api.at.govt.nz/v1/public/display/parkinglocations?
 
 # <codecell>
 
+newurl = ('https://api.at.govt.nz/v1/public/realtime/vehiclelocations')
+
+# <codecell>
+
+agency = ('gtfs/agency')
+
+# <codecell>
+
+startu = ('https://api.at.govt.nz/v1/public/')
+
+# <codecell>
+
+mergu = startu + agency
+
+# <codecell>
+
+mergu
+
+# <codecell>
+
+adpre = (mergu + '?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd' )
+
+# <codecell>
+
+atoiat = requests.get('https://api.at.govt.nz/v1/public/gtfs/agency?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd')
+
+# <codecell>
+
+atbat = requests.get('https://api.at.govt.nz/v1/public/agency?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd')
+
+# <codecell>
+
+atbat
+
+# <codecell>
+
 atext = atdat.text
 
 # <codecell>
@@ -40,28 +76,12 @@ testpark
 
 # <codecell>
 
-class parks(object):
-    def getparks(self):
-        return atres
-    
-    def items(self):
-        return atres[0]
-    
-    def ranpark(self):
-        return atres[ranpark]
-
-# <codecell>
-
 #mything = parks()
 
 # <codecell>
 
 #for a in mything.getparks():
  #   print a
-
-# <codecell>
-
-test = parks()
 
 # <codecell>
 
@@ -81,12 +101,91 @@ thekeys
 
 # <codecell>
 
+listz = []
+
+# <codecell>
+
 for kez in thekeys:
-    print kez
+    #print key
+    print atres[0][kez]
+    listz.append(atres[0][kez])
+    
 
 # <codecell>
 
 #dait = atdict.items()
+
+# <codecell>
+
+print listz[3]
+
+# <codecell>
+
+import geopy
+
+# <codecell>
+
+geo = geopy.GoogleV3()
+
+# <codecell>
+
+geo.geocode(listz[3])
+
+# <codecell>
+
+olenz = len(listz)
+
+# <codecell>
+
+dachoice = random.randint(0, olenz)
+
+# <codecell>
+
+dachoice
+
+# <codecell>
+
+class parks(object):
+    def getparks(self):
+        return atres
+    
+    def items(self):
+        return atres[0]
+    
+    def ranpark(self):
+        return atres[ranpark]
+    
+    def genpark(self):
+        return (geo.geocode(listz[3]))
+    
+    def geopark(self):
+        return(geo.geocode(listz[dachoice]))
+    
+    
+
+# <codecell>
+
+test = parks()
+
+# <codecell>
+
+test.genpark()
+
+# <codecell>
+
+test.geopark()
+
+# <codecell>
+
+geo.geocode(listz[3])
+
+# <codecell>
+
+listz.sort()
+
+# <codecell>
+
+listz
 
 # <codecell>
 
