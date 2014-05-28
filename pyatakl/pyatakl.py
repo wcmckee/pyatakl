@@ -158,18 +158,32 @@ class parks(object):
     def genpark(self):
         return (geo.geocode(listz[3]))
     
-    def geopark(self):
-        return(geo.geocode(listz[dachoice]))
+    def parkloc(self):
+        return(atres[ranpark]['address'])
+    
+    def parkid(self):
+        return(atres[renpark]['id'])
     
     
 
 # <codecell>
 
-test = parks()
 
 # <codecell>
 
-test.genpark()
+park = parks()
+
+# <codecell>
+
+park.genpark()
+
+# <codecell>
+
+park.parkloc()
+
+# <codecell>
+
+park.parkid()
 
 # <codecell>
 
