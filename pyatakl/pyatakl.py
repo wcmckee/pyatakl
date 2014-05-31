@@ -10,46 +10,15 @@ import random
 # <markdowncell>
 
 # <h1>Python Auckland Transport</h1> 
+# 
+# This was created during the Hack Auckland: Auckland Transport event in Auckland.
+# The first day was spent visiting the vendors and having a play with bitcoin.
+# 2nd day was more productive with this python code being typed.
+# My plan was to use data from the Auckland Motorcams to detect crashes or events happening on the road. I really should of said this when I got up and talked in front of people about my plan for the event - instead I mentioned the camera feed and how I would like to improve it with more relatient information - including gps of the cameras. 
 
 # <codecell>
 
 atdat = requests.get('https://api.at.govt.nz/v1/public/display/parkinglocations?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd')
-
-# <codecell>
-
-newurl = ('https://api.at.govt.nz/v1/public/realtime/vehiclelocations')
-
-# <codecell>
-
-agency = ('gtfs/agency')
-
-# <codecell>
-
-startu = ('https://api.at.govt.nz/v1/public/')
-
-# <codecell>
-
-mergu = startu + agency
-
-# <codecell>
-
-mergu
-
-# <codecell>
-
-adpre = (mergu + '?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd' )
-
-# <codecell>
-
-atoiat = requests.get('https://api.at.govt.nz/v1/public/gtfs/agency?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd')
-
-# <codecell>
-
-atbat = requests.get('https://api.at.govt.nz/v1/public/agency?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd')
-
-# <codecell>
-
-atbat
 
 # <codecell>
 
@@ -73,23 +42,16 @@ ranpark = random.randint(0, atlen)
 
 # <codecell>
 
+mything = parks()
 
 # <codecell>
 
-testpark
+for a in mything.getparks():
+    print a.keys()
 
 # <codecell>
 
-#mything = parks()
-
-# <codecell>
-
-#for a in mything.getparks():
- #   print a
-
-# <codecell>
-
-#blen = atres[0:atlen]
+blen = atres[0:atlen]
 
 # <codecell>
 
@@ -346,10 +308,58 @@ busdata.longdata()
 
 # <codecell>
 
+longdatas = str(busdata.longdata())
+
+# <codecell>
+
+longdatas
+
+# <codecell>
+
+latdatas = str(busdata.latdata())
+
+# <codecell>
+
+latdatas
 
 # <codecell>
 
 busdata.latdata()
+
+# <codecell>
+
+bothdata
+
+# <codecell>
+
+from geopy.geocoders import GoogleV3
+geolocator = GoogleV3()
+
+# <codecell>
+
+address, (longdatas, longitude) = geolocator.reverse(longdatas, latdatas)
+print(address, latitude, longitude)
+
+# <codecell>
+
+print geolocator.reverse(longdatas, latdatas)
+
+# <codecell>
+
+print geolocator.geocode(latdatas, longdatas)
+
+# <codecell>
+
+for d in geolocator.geocode(busdata.latdata(), busdata.longdata()):
+    print d
+
+# <codecell>
+
+testgeo = geolocator.geocode(-36.921086, 174.80408)
+
+# <codecell>
+
+print testgeo
 
 # <codecell>
 
