@@ -7,6 +7,10 @@ import requests
 import json
 import random
 
+# <markdowncell>
+
+# <h1>Python Auckland Transport</h1> 
+
 # <codecell>
 
 atdat = requests.get('https://api.at.govt.nz/v1/public/display/parkinglocations?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd')
@@ -164,7 +168,11 @@ class parks(object):
     def parkid(self):
         return(atres[renpark]['id'])
     
+    def parkcheck():
+        return(atres[renpark]['type'])
     
+    def parknon(self, inpuz ):
+        return(atres[renpark][inpuz])
 
 # <codecell>
 
@@ -180,6 +188,8 @@ park.genpark()
 # <codecell>
 
 park.parkloc()
+
+park.parknon()
 
 # <codecell>
 
@@ -247,6 +257,37 @@ listz
 # <codecell>
 
 #atkey.name
+
+# <codecell>
+
+
+# <codecell>
+
+getdispl = ('http://api.at.govt.nz/v1/public/realtime/vehiclelocations?api_key=433feddb-d4b9-473b-a0c2-ac982a6d78cd')
+
+# <codecell>
+
+getres = requests.get(getdispl)
+
+# <codecell>
+
+gettx = getres.text
+
+# <codecell>
+
+pajson = json.loads(gettx)
+
+# <codecell>
+
+pajson.keys()
+
+# <codecell>
+
+patze = pajson['response']
+
+# <codecell>
+
+patze.items()
 
 # <codecell>
 
