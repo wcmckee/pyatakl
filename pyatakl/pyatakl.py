@@ -279,15 +279,77 @@ pajson = json.loads(gettx)
 
 # <codecell>
 
+patza = pajson.keys()
+
+# <codecell>
+
 pajson.keys()
 
 # <codecell>
 
-patze = pajson['response']
+for i in pajson:
+    print i
 
 # <codecell>
 
-patze.items()
+patze = pajson['response']['entity'][0]
+
+# <codecell>
+
+patze
+
+# <codecell>
+
+paveh = patze['vehicle']
+
+# <codecell>
+
+pala = paveh['position']
+
+# <codecell>
+
+print pala
+
+# <codecell>
+
+palat = pala['latitude'] 
+
+# <codecell>
+
+palat
+
+# <codecell>
+
+palong = pala['longitude']
+
+# <codecell>
+
+palong
+
+# <codecell>
+
+class busdata(object):
+    
+    def latdata(self):
+        return palat
+    def longdata(self):
+        return palong
+    
+
+# <codecell>
+
+busdata = busdata()
+
+# <codecell>
+
+busdata.longdata()
+
+# <codecell>
+
+
+# <codecell>
+
+busdata.latdata()
 
 # <codecell>
 
