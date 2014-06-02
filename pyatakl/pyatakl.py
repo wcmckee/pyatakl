@@ -151,7 +151,7 @@ park.genpark()
 
 park.parkloc()
 
-park.parknon()
+park.parknon('check')
 
 # <codecell>
 
@@ -360,6 +360,87 @@ testgeo = geolocator.geocode(-36.921086, 174.80408)
 # <codecell>
 
 print testgeo
+
+# <codecell>
+
+import chess
+
+# <codecell>
+
+pos = chess.time
+
+# <codecell>
+
+pos.clock()
+
+# <codecell>
+
+chess.A2
+
+# <codecell>
+
+board = chess.Bitboard()
+board.push_san("e4")
+board.push_san("e5")
+board.push_san("Qh5")
+board.push_san("Nc6")
+board.push_san("Bc4")
+board.push_san("Nf6")
+board.push_san("Qxf7")
+assert board.is_checkmate()
+
+# <codecell>
+
+assert board
+
+# <codecell>
+
+print board
+
+# <codecell>
+
+chess.WHITE
+
+# <codecell>
+
+board.pawns
+
+# <codecell>
+
+print board
+
+# <codecell>
+
+print board.is_pseudo_legal
+
+# <codecell>
+
+import os
+
+# <codecell>
+
+os.getppid()
+
+# <codecell>
+
+os.geteuid()
+
+# <codecell>
+
+os.access()
+
+# <codecell>
+
+%%HTML
+<h1>test</h1>
+
+# <codecell>
+
+getart = requests.get('http://artcontrol.me/mays-paint/')
+
+# <codecell>
+
+getart.json()
 
 # <codecell>
 
