@@ -407,6 +407,14 @@ board.pawns
 
 # <codecell>
 
+import pprint
+
+# <codecell>
+
+pprint.pprint(board)
+
+# <codecell>
+
 print board
 
 # <codecell>
