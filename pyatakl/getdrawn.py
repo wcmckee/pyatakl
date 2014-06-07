@@ -105,7 +105,11 @@ comlis = list(rd.get_comments('all'))[0]
 
 # <codecell>
 
-comlis
+savred = comlis.author
+
+# <codecell>
+
+comus = str(savred.name)
 
 # <codecell>
 
@@ -140,7 +144,7 @@ soup.
 
 import re
 
-myString = str(soup.index)
+myString = str(soup.string)
 
 rdgimg = re.search("(?P<url>https?://[^\s]+)", myString).group("url")
 
@@ -151,6 +155,98 @@ from IPython.display import Image
 # <codecell>
 
 i = Image(filename=rdgimg)
+
+# <codecell>
+
+print rdgimg
+
+# <codecell>
+
+import os
+
+# <codecell>
+
+os.mkdir('/home/wcmckee/rgd')
+
+# <codecell>
+
+os.chdir('/home/wcmckee/rgd')
+
+# <codecell>
+
+pwd
+
+# <codecell>
+
+import requests
+
+# <codecell>
+
+reqrgd = requests.get(rdgimg)
+
+# <codecell>
+
+#reqrgd.text
+
+# <codecell>
+
+finz = (comus + '.jpg')
+
+# <codecell>
+
+savrgd = open(finz, 'wb')
+
+# <codecell>
+
+savrgd.write(reqrgd.url)
+savrgd.close()
+
+# <codecell>
+
+import urllib
+resource = urllib.urlopen(rdgimg)
+output = open(finz,"wb")
+output.write(resource.read())
+output.close()
+
+# <codecell>
+
+
+# <codecell>
+
+dizusr = Image(filename=finz)
+
+# <codecell>
+
+dizusr
+
+# <codecell>
+
+import envoy
+
+# <codecell>
+
+r = envoy.run('wget ' + rdgimg)
+
+# <codecell>
+
+print r.std_out
+
+# <codecell>
+
+print r.status_code
+
+# <codecell>
+
+mwg = envoy.run('man wget')
+
+# <codecell>
+
+mwg.command
+
+# <codecell>
+
+mwg.std_out
 
 # <codecell>
 
