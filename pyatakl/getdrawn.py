@@ -9,6 +9,14 @@
 
 # <codecell>
 
+import os
+import random
+import bs4
+import requests
+import re
+
+# <codecell>
+
 import praw
 
 # <codecell>
@@ -29,37 +37,32 @@ rd.created
 
 # <codecell>
 
-rd.subscribers
+subls = []
 
 # <codecell>
 
-contrrgd = rd.get_contributors()
+subrd = rd.subscribers
+subls.append(subrd)
 
 # <codecell>
 
-
-# <codecell>
-
-
-# <codecell>
-
-rgdh = rd.header_img
-
-# <codecell>
-
-rd.subreddit_type
-
-# <codecell>
-
-rd.header_title
-
-# <codecell>
-
-str(rd.get_random_submission())
+subls
 
 # <codecell>
 
 wikipg = list(rd.get_wiki_pages())[4]
+
+# <codecell>
+
+from string import maketrans   # Required to call maketrans function.
+
+intab = "aeiou"
+outtab = "12345"
+trantab = maketrans(intab, outtab)
+
+
+str = "this is string example....wow!!!";
+print str.translate(trantab);
 
 # <codecell>
 
@@ -75,7 +78,19 @@ wikipg.revision_by
 
 # <codecell>
 
-wikipg.content_md
+savmd = open('wiki.md', 'w')
+
+# <codecell>
+
+wikip = wikipg.content_md
+
+# <codecell>
+
+savmd.write(wikip)
+
+# <codecell>
+
+savmd.close()
 
 # <codecell>
 
@@ -87,7 +102,7 @@ allmods.sort()
 
 # <codecell>
 
-modzro = allmods[0]
+modzro = allmods[3]
 
 # <codecell>
 
@@ -95,8 +110,31 @@ modcom = modzro.get_comments()
 
 # <codecell>
 
+banlolz = []
+
+# <codecell>
+
 for infz in modcom:
     print infz
+    banlolz.append(infz)
+
+# <codecell>
+
+len(banlolz)
+
+banlizt = []
+
+# <codecell>
+
+for banz in banlolz:
+    print banz
+    banlizt.append((banz.body))
+    
+    
+
+# <codecell>
+
+banlizt
 
 # <codecell>
 
@@ -164,6 +202,7 @@ allcom = r.get_subreddit('redditgetsdrawn')
 
 # <codecell>
 
+lisbox = senrgd[1]
 
 # <codecell>
 
@@ -188,8 +227,6 @@ print soup.contents
 
 # <codecell>
 
-import re
-
 myString = str(soup.string)
 
 rdgimg = re.search("(?P<url>https?://[^\s]+)", myString).group("url")
@@ -201,10 +238,6 @@ from IPython.display import Image
 # <codecell>
 
 print rdgimg
-
-# <codecell>
-
-import os
 
 # <codecell>
 
@@ -307,7 +340,7 @@ for mo in mymod:
 
 # <codecell>
 
-rdrawn = r.get_subreddit('redditgetsdrawn')
+rdrawn = r.get_subreddit('artcontroldrawsyou')
 
 # <codecell>
 
@@ -316,6 +349,10 @@ rdrawn.subscribe()
 # <codecell>
 
 rdnew = rdrawn.get_new
+
+# <codecell>
+
+rdrawn.submit('test', rdgimg)
 
 # <codecell>
 
@@ -374,7 +411,7 @@ linkdict
 
 # <codecell>
 
-    rgdict
+rgdict
 
 # <codecell>
 
@@ -456,11 +493,10 @@ Image(strfre)
 
 # <codecell>
 
-
-#resource = urllib.urlopen(rdgimg)
-#output = open(fulzname,"w")
-#output.write(rdgimg)
-#output.close()
+resource = urllib.urlopen(rdgimg)
+output = open(fulzname,"w")
+output.write(rdgimg)
+output.close()
 
 # <codecell>
 
@@ -592,6 +628,19 @@ print arlik()
 
 # <codecell>
 
+ls
+
+# <codecell>
+
+drzu = r.get_subreddit('artcontroldrawsyou')
+
+# <codecell>
+
+drzu
+
+# <codecell>
+
+drzu.upload_image()
 
 # <codecell>
 
