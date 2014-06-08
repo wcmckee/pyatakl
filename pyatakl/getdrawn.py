@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
+# <markdowncell>
+
+# Get Drawn
+# 
+# A python script for reddit 
+
 # <codecell>
 
 import praw
@@ -11,28 +17,7 @@ r = praw.Reddit(user_agent='redditgetsdrawn blog post')
 
 # <codecell>
 
-subs = r.get_subreddit('redditgetsdrawn').get_new(limit=5)
-
-# <codecell>
-
-[str(x) for x in subs]
-
-# <codecell>
-
-for dat in subs:
-    print dat
-
-# <codecell>
-
 rd = r.get_subreddit('redditgetsdrawn')
-
-# <codecell>
-
-rd.description
-
-# <codecell>
-
-rd.fullname
 
 # <codecell>
 
@@ -52,39 +37,17 @@ contrrgd = rd.get_contributors()
 
 # <codecell>
 
+
+# <codecell>
+
+
+# <codecell>
+
 rgdh = rd.header_img
 
 # <codecell>
 
 rd.subreddit_type
-
-# <codecell>
-
-styshet = str(rd.get_stylesheet())
-
-# <codecell>
-
-savsty = open('style.css', 'w')
-
-# <codecell>
-
-savsty.write(styshet)
-savsty.close()
-
-# <codecell>
-
-opshet = open('style.css', 'r')
-
-# <codecell>
-
-stysavz = opshet.read()
-
-# <codecell>
-
-
-# <codecell>
-
-rd.public_traffic
 
 # <codecell>
 
@@ -201,7 +164,6 @@ allcom = r.get_subreddit('redditgetsdrawn')
 
 # <codecell>
 
-suncomm = allcom.get_comments()
 
 # <codecell>
 
@@ -275,6 +237,10 @@ savrgd.close()
 
 # <codecell>
 
+finz
+
+# <codecell>
+
 import urllib
 resource = urllib.urlopen(rdgimg)
 output = open(finz,"wb")
@@ -283,6 +249,7 @@ output.close()
 
 # <codecell>
 
+ls
 
 # <codecell>
 
@@ -290,11 +257,15 @@ dizusr = Image(filename=finz)
 
 # <codecell>
 
+
+# <codecell>
+
 dizusr
 
 # <codecell>
 
-r.login('snatchrgd', 'camp123')
+#r.login('snatchrgd', 'camp123')
+r.login('artcontrol', 'test123')
 
 # <codecell>
 
@@ -363,12 +334,56 @@ for rd in rdnew():
 # <codecell>
 
 rdurlz = []
+rdusers = []
 
 # <codecell>
 
 for itez in redls:
     print itez.url
     rdurlz.append(itez.url)
+    rdusers.append(itez.author)
+
+# <codecell>
+
+uzrlaz = []
+
+# <codecell>
+
+rgdict = {'user': 'wcmckee', 'img': 'test'}
+
+# <codecell>
+
+for rduzr in rdusers:
+    print rduzr
+    uzrlaz.append(str(rduzr))
+    rgdict.update({str(rduzr): 'url'})
+
+    
+
+# <codecell>
+
+    rgdict
+
+# <codecell>
+
+for rez in uzrlaz:
+    rgdict.update({'user': rez})
+
+# <codecell>
+
+    rgdict
+
+# <codecell>
+
+rgdict.update({'id': rez})
+
+# <codecell>
+
+rgdict
+
+# <codecell>
+
+uzrlaz
 
 # <codecell>
 
@@ -377,7 +392,79 @@ rd.ups
 
 # <codecell>
 
-savreq = requests.get(rdurlz[1])
+nezlis = []
+
+# <codecell>
+
+#rdurlz
+
+for jpgz in rdurlz:
+    if  '.jpg' in jpgz:
+        nezlis.append(jpgz)
+    #else print 'didnt append'
+        
+
+#if  '*.jpg' in rdurlz:
+#    print '*.jpg'
+
+# <codecell>
+
+nezlis
+
+# <codecell>
+
+import random
+
+# <codecell>
+
+lrdz = len(rdurlz)
+
+# <codecell>
+
+recrand = random.randint(0, lrdz)
+
+# <codecell>
+
+recrand
+
+# <codecell>
+
+freimg = nezlis[recrand]
+
+# <codecell>
+
+strfre = str(freimg)
+
+# <codecell>
+
+
+# <codecell>
+
+Image(strfre)
+
+# <codecell>
+
+
+#resource = urllib.urlopen(rdgimg)
+#output = open(fulzname,"w")
+#output.write(rdgimg)
+#output.close()
+
+# <codecell>
+
+import o
+
+# <codecell>
+
+fulzname
+
+# <codecell>
+
+rdurlz
+
+# <codecell>
+
+savreq = requests.get(rdurlz[7])
 
 # <codecell>
 
@@ -398,24 +485,25 @@ fulzname = (usrzname + '.jpg')
 # <codecell>
 
 resource = urllib.urlopen(rdgimg)
-output = open(fulzname,"wb")
-output.write(resource.read())
+output = open(fulzname,"w")
+output.write(rdgimg)
 output.close()
 
 # <codecell>
 
-savreqa.write(savreq)
+fulzname
+
+# <codecell>
+
+Image(fulzname)
+
+# <codecell>
+
+ls
 
 # <codecell>
 
 rgdtit = rd.title
-
-# <codecell>
-
-rgdthumb = rd.thumbnail
-
-# <codecell>
-
 
 # <codecell>
 
@@ -469,6 +557,29 @@ artget = r.get_subreddit('artcontroldrawsyou')
 # <codecell>
 
 artget.submit(rdusern, rdurlz )
+
+# <codecell>
+
+artctrl = r.get_redditor('artcontrol')
+
+# <codecell>
+
+arlik = artctrl.get_liked
+
+# <codecell>
+
+arlik
+
+# <codecell>
+
+print arlik
+
+# <codecell>
+
+print arlik()
+
+# <codecell>
+
 
 # <codecell>
 
