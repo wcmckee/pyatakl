@@ -175,12 +175,25 @@ for comes in seclis:
 
 # <codecell>
 
-for comz in newcoms:
-    print comz
+senrgd = []
 
 # <codecell>
 
-said = str(comlis.id)
+for comz in newcoms:
+    print comz
+    senrgd.append(comz.submission.url)
+
+# <codecell>
+
+import pyimgur
+
+# <codecell>
+
+pyimgur.Imgur.upload_image
+
+# <codecell>
+
+comz.submission.url
 
 # <codecell>
 
@@ -189,18 +202,6 @@ allcom = r.get_subreddit('redditgetsdrawn')
 # <codecell>
 
 suncomm = allcom.get_comments()
-
-# <codecell>
-
-savred = comlis.author
-
-# <codecell>
-
-comus = str(savred.name)
-
-# <codecell>
-
-lisbox = comlis.body
 
 # <codecell>
 
@@ -376,10 +377,6 @@ rd.ups
 
 # <codecell>
 
-rdurlz
-
-# <codecell>
-
 savreq = requests.get(rdurlz[1])
 
 # <codecell>
@@ -400,12 +397,10 @@ fulzname = (usrzname + '.jpg')
 
 # <codecell>
 
-with open(fulzname, 'wb') as f:
-    f.write(savreq)
-
-# <codecell>
-
-savreqa = open(fulzname, 'wb')
+resource = urllib.urlopen(rdgimg)
+output = open(fulzname,"wb")
+output.write(resource.read())
+output.close()
 
 # <codecell>
 
@@ -413,11 +408,14 @@ savreqa.write(savreq)
 
 # <codecell>
 
-rd.title
+rgdtit = rd.title
 
 # <codecell>
 
-rd.thumbnail
+rgdthumb = rd.thumbnail
+
+# <codecell>
+
 
 # <codecell>
 
