@@ -318,4 +318,29 @@ url = r.get_authorize_url('uniqueKey', 'identity', True)
 
 # <codecell>
 
+r.login('snatchrgd', 'camp123')
+
+# <codecell>
+
+r.client_id
+
+# <codecell>
+
+redfront = r.get_front_page()
+
+# <codecell>
+
+for red in redfront:
+    print red
+
+# <codecell>
+
+red
+
+# <codecell>
+
+red.comments
+
+# <codecell>
+
 
