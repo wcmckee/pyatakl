@@ -19,20 +19,12 @@ subs = r.get_subreddit('redditgetsdrawn').get_new(limit=5)
 
 # <codecell>
 
-subs
-
-# <codecell>
-
 for dat in subs:
     print dat
 
 # <codecell>
 
 rd = r.get_subreddit('redditgetsdrawn')
-
-# <codecell>
-
-rd
 
 # <codecell>
 
@@ -82,14 +74,6 @@ savsty.close()
 # <codecell>
 
 opshet = open('style.css', 'r')
-
-# <codecell>
-
-import json
-
-# <codecell>
-
-json.load(stysavz)
 
 # <codecell>
 
@@ -181,19 +165,18 @@ seclis = list(rd.get_comments())
 
 # <codecell>
 
+newcoms = []
 
 # <codecell>
 
 for comes in seclis:
     print (comes)
+    newcoms.append(comes)
 
 # <codecell>
 
-comlis = list(rd.get_comments[0])
-
-# <codecell>
-
-print said
+for comz in newcoms:
+    print comz
 
 # <codecell>
 
@@ -206,10 +189,6 @@ allcom = r.get_subreddit('redditgetsdrawn')
 # <codecell>
 
 suncomm = allcom.get_comments()
-
-# <codecell>
-
-suncomm
 
 # <codecell>
 
@@ -314,10 +293,6 @@ dizusr
 
 # <codecell>
 
-url = r.get_authorize_url('uniqueKey', 'identity', True)
-
-# <codecell>
-
 r.login('snatchrgd', 'camp123')
 
 # <codecell>
@@ -340,6 +315,162 @@ red
 # <codecell>
 
 red.comments
+
+# <codecell>
+
+red.downs
+
+# <codecell>
+
+red.title
+
+# <codecell>
+
+mymod = r.get_my_moderation()
+
+# <codecell>
+
+for mo in mymod:
+    print mo
+
+# <codecell>
+
+rdrawn = r.get_subreddit('redditgetsdrawn')
+
+# <codecell>
+
+rdrawn.subscribe()
+
+# <codecell>
+
+rdnew = rdrawn.get_new
+
+# <codecell>
+
+redls = []
+
+# <codecell>
+
+for rd in rdnew():
+    print rd
+    redls.append(rd)
+
+# <codecell>
+
+    rd.selftext
+
+# <codecell>
+
+rdurlz = []
+
+# <codecell>
+
+for itez in redls:
+    print itez.url
+    rdurlz.append(itez.url)
+
+# <codecell>
+
+rd.downs
+rd.ups
+
+# <codecell>
+
+rdurlz
+
+# <codecell>
+
+savreq = requests.get(rdurlz[1])
+
+# <codecell>
+
+rezlz =  redls[0]
+
+# <codecell>
+
+reuzrz = rezlz.author
+
+# <codecell>
+
+usrzname = str(reuzrz.name)
+
+# <codecell>
+
+fulzname = (usrzname + '.jpg')
+
+# <codecell>
+
+with open(fulzname, 'wb') as f:
+    f.write(savreq)
+
+# <codecell>
+
+savreqa = open(fulzname, 'wb')
+
+# <codecell>
+
+savreqa.write(savreq)
+
+# <codecell>
+
+rd.title
+
+# <codecell>
+
+rd.thumbnail
+
+# <codecell>
+
+rdurlz = str(rd.url)
+
+# <codecell>
+
+rdauth =rd.author
+
+# <codecell>
+
+rdusern = str(rdauth.name)
+
+# <codecell>
+
+rdauth.is_gold
+
+# <codecell>
+
+rdauth.json_dict
+
+# <codecell>
+
+rdauth.id
+
+# <codecell>
+
+rdsub = rdauth.get_submitted
+
+# <codecell>
+
+for rsu in rdsub():
+    print rsu
+
+# <codecell>
+
+rsu.selftext
+
+# <codecell>
+
+othasub = rsu.subreddit
+
+# <codecell>
+
+print othasub
+
+# <codecell>
+
+artget = r.get_subreddit('artcontroldrawsyou')
+
+# <codecell>
+
+artget.submit(rdusern, rdurlz )
 
 # <codecell>
 
