@@ -23,6 +23,8 @@ subs
 
 # <codecell>
 
+for dat in subs:
+    print dat
 
 # <codecell>
 
@@ -54,6 +56,50 @@ rd.subscribers
 
 # <codecell>
 
+contrrgd = rd.get_contributors()
+
+# <codecell>
+
+rgdh = rd.header_img
+
+# <codecell>
+
+rd.subreddit_type
+
+# <codecell>
+
+styshet = str(rd.get_stylesheet())
+
+# <codecell>
+
+savsty = open('style.css', 'w')
+
+# <codecell>
+
+savsty.write(styshet)
+savsty.close()
+
+# <codecell>
+
+opshet = open('style.css', 'r')
+
+# <codecell>
+
+import json
+
+# <codecell>
+
+json.load(stysavz)
+
+# <codecell>
+
+stysavz = opshet.read()
+
+# <codecell>
+
+
+# <codecell>
+
 rd.public_traffic
 
 # <codecell>
@@ -62,6 +108,7 @@ rd.header_title
 
 # <codecell>
 
+str(rd.get_random_submission())
 
 # <codecell>
 
@@ -85,7 +132,36 @@ wikipg.content_md
 
 # <codecell>
 
-list(rd.get_moderators())
+allmods = list(rd.get_moderators())
+
+# <codecell>
+
+allmods.sort()
+
+# <codecell>
+
+modzro = allmods[0]
+
+# <codecell>
+
+modcom = modzro.get_comments()
+
+# <codecell>
+
+for infz in modcom:
+    print infz
+
+# <codecell>
+
+modzro.fullname
+
+# <codecell>
+
+print infz.subreddit
+
+# <codecell>
+
+print infz.body
 
 # <codecell>
 
@@ -101,7 +177,39 @@ rd.get_stylesheet()
 
 # <codecell>
 
-comlis = list(rd.get_comments('all'))[0]
+seclis = list(rd.get_comments())
+
+# <codecell>
+
+
+# <codecell>
+
+for comes in seclis:
+    print (comes)
+
+# <codecell>
+
+comlis = list(rd.get_comments[0])
+
+# <codecell>
+
+print said
+
+# <codecell>
+
+said = str(comlis.id)
+
+# <codecell>
+
+allcom = r.get_subreddit('redditgetsdrawn')
+
+# <codecell>
+
+suncomm = allcom.get_comments()
+
+# <codecell>
+
+suncomm
 
 # <codecell>
 
@@ -206,6 +314,7 @@ dizusr
 
 # <codecell>
 
+url = r.get_authorize_url('uniqueKey', 'identity', True)
 
 # <codecell>
 
