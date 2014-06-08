@@ -350,15 +350,27 @@ uzrlaz = []
 # <codecell>
 
 rgdict = {'user': 'wcmckee', 'img': 'test'}
+linkdict = {'links': 'artcontrol', 'user': 'url'}
 
 # <codecell>
 
-for rduzr in rdusers:
+for rduzr in rdusers, :
     print rduzr
     uzrlaz.append(str(rduzr))
     rgdict.update({str(rduzr): 'url'})
 
     
+
+# <codecell>
+
+for itez in redls:
+    print itez.url
+    linkdict.update({str(itez.author):itez.url})
+    
+
+# <codecell>
+
+linkdict
 
 # <codecell>
 
