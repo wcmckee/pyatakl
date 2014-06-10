@@ -14,6 +14,7 @@ import random
 import bs4
 import requests
 import re
+import json
 
 # <codecell>
 
@@ -134,7 +135,33 @@ for banz in banlolz:
 
 # <codecell>
 
+blsz = []
+
+# <codecell>
+
 banlizt
+for bez in banlizt:
+    
+    print bez
+    #if  'remove' or 'banned' in bez: 
+     #   blsz.append(bez)
+
+# <codecell>
+
+blsz
+
+# <codecell>
+
+izone = banlizt[0]
+
+# <codecell>
+
+szone = str(izone())
+
+# <codecell>
+
+str = banlizt;
+print str.translate(trantab);
 
 # <codecell>
 
@@ -340,7 +367,7 @@ for mo in mymod:
 
 # <codecell>
 
-rdrawn = r.get_subreddit('artcontroldrawsyou')
+rdrawn = r.get_subreddit('redditgetsdrawn')
 
 # <codecell>
 
