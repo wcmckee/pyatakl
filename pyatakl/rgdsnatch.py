@@ -24,11 +24,11 @@ r = praw.Reddit(user_agent='rgdsnatch')
 
 # <codecell>
 
-#r.login('artcontrol', 'test123')
+r.login('artcontrol', 'newfile123')
 
 # <codecell>
 
-rd = r.get_subreddit('redditgonemild')
+rd = r.get_subreddit('redditgetsdrawn')
 
 # <codecell>
 
@@ -40,13 +40,49 @@ rdnew = []
 
 # <codecell>
 
+rdnew
+
+# <codecell>
+
 for uz in rdnewz:
     #print uz
     rdnew.append(uz)
 
 # <codecell>
 
-rd.get_top
+ransubz = random.randint(0,24)
+
+# <codecell>
+
+print ransubz
+
+# <codecell>
+
+ransev = rdnew[ransubz]
+
+# <codecell>
+
+rgdautoz = str(ransev.author)
+
+# <codecell>
+
+rgdaqwew = ('[RGD]' + rgdautoz)
+
+# <codecell>
+
+rgdaturo = str(ransev.url)
+
+# <codecell>
+
+rgdatit = str(ransev.title)
+
+# <codecell>
+
+rgdatit
+
+# <codecell>
+
+#rd.get_top
 
 # <codecell>
 
@@ -54,10 +90,54 @@ linkdict = {}
 
 # <codecell>
 
-for newa in rdnew:
-    #rint newa.url
-    #print newa.author
-    linkdict.update({str(newa.author): str(newa.url)})
+ophtml = open('index.html', 'w')
+
+# <codecell>
+
+
+# <codecell>
+
+ady = r.get_subreddit('artcontroldrawsyou')
+
+# <codecell>
+
+comrgd =  rgdatit + ' ' + rgdaturo
+
+# <codecell>
+
+comrgd
+
+# <codecell>
+
+ady.submit(rgdautoz, (rgdaqwew, comrgd))
+
+# <rawcell>
+
+# for newa in rdnew:
+#     #rint newa.url
+#     print len(newa)
+#     htmstr = (str(newa.title) + '<a href="' + 
+#                  str(newa.url) + 
+#                  '"><img class="aligncenter size-large wp-image-5723" alt="' +
+#                  str(newa.author) +
+#                  '" src="' + 
+#                  str(newa.url) + 
+#                  '" /></a>')
+#     #ophtml.write(htmstr)
+#     ady.submit(('[RGD]' + newa.author), newa.url)
+#     print newa.author
+#     #print newa.media
+#     ophtml.write(htmstr)
+#     print newa.selftext
+#     print newa.title
+#     print newa.url
+#     print newa.num_comments
+#     
+#     linkdict.update({str(newa.author): str(newa.url)})
+
+# <codecell>
+
+#print str(newa.title)
 
 # <codecell>
 
@@ -69,17 +149,10 @@ newzjson = json.dumps(linkdict)
 
 # <codecell>
 
-newzjson
+#newzjson
 
 # <codecell>
 
-
-# <codecell>
-
-newposts = open('userurl.json', 'a')
-newposts.write(newzjson)
-print 'file userurl.json updated'
-newposts.close()
 
 # <codecell>
 
@@ -97,7 +170,7 @@ mincom = rmine.get_comments()
 
 # <codecell>
 
-print mincom
+#print mincom
 
 # <codecell>
 
@@ -105,13 +178,41 @@ minels = []
 
 # <codecell>
 
-for con in mincom:
-    print con
-    minels.append(con)
+
+dausr = {}
 
 # <codecell>
 
-minels
+for newa in rdnew:
+    #rint newa.url
+    #print newa.author
+    linkdict.update({str(newa.author): str(newa.url)})
+
+# <codecell>
+
+for con in mincom:
+    #print con.body
+    minels.append(con)
+    dausr.update({str(con.id): str(con.body)})
+
+# <codecell>
+
+noizjson = json.dumps(dausr)
+
+# <codecell>
+
+newposts = open('userurl.json', 'a')
+newposts.write(newzjson)
+print 'file userurl.json updated'
+newcomments = open('idcomt.json', 'a')
+newcomments.write(noizjson)
+print 'user comments updated'
+newposts.close()
+newcomments.close()
+
+# <codecell>
+
+rdusr = str(con.author)
 
 # <codecell>
 
@@ -122,17 +223,17 @@ minelsz = []
 
 # <codecell>
 
-for mina in minels:
-    print mina.body
-    minelsz.append(mina.body)
+#for mina in minels:
+    #print mina.body
+   # minelsz.append(mina.body)
 
 # <codecell>
 
-minelsz
+#minelsz
 
 # <codecell>
 
-mina.body
+#mina.body
 
 # <codecell>
 
