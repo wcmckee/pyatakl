@@ -22,10 +22,6 @@ ls
 
 # <codecell>
 
-r = 
-
-# <codecell>
-
 opfil = open('userurl.json', 'r')
 
 # <codecell>
@@ -50,4 +46,5 @@ usjson
 
 # <codecell>
 
+r.
 

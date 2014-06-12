@@ -28,7 +28,41 @@ r.login('artcontrol', 'newfile123')
 
 # <codecell>
 
-rd = r.get_subreddit('redditgetsdrawn')
+usrd = r.get_my_subreddits()
+
+# <codecell>
+
+suls = []
+
+# <codecell>
+
+for subs in usrd:
+    print subs
+    suls.append(subs)
+
+# <codecell>
+
+suls
+
+# <codecell>
+
+lesuls = len(suls)
+
+ransuz = random.randint(0, lesuls)
+
+thesubraz = suls[ransuz]
+
+# <codecell>
+
+suls
+
+# <codecell>
+
+print thesubraz
+
+# <codecell>
+
+rd = r.get_subreddit(str(thesubraz))
 
 # <codecell>
 
@@ -47,6 +81,10 @@ rdnew
 for uz in rdnewz:
     #print uz
     rdnew.append(uz)
+
+# <codecell>
+
+rdnew
 
 # <codecell>
 
@@ -203,10 +241,10 @@ noizjson = json.dumps(dausr)
 
 newposts = open('userurl.json', 'a')
 newposts.write(newzjson)
-print 'file userurl.json updated'
+print ('file userurl.json updated')
 newcomments = open('idcomt.json', 'a')
 newcomments.write(noizjson)
-print 'user comments updated'
+print ('user comments updated')
 newposts.close()
 newcomments.close()
 
@@ -234,6 +272,12 @@ minelsz = []
 # <codecell>
 
 #mina.body
+
+# <codecell>
+
+
+# <codecell>
+
 
 # <codecell>
 

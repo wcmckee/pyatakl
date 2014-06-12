@@ -9,6 +9,26 @@
 
 # <codecell>
 
+x = 'hello ther!'
+
+# <codecell>
+
+mylist = []
+
+# <codecell>
+
+mylist.append('testing adding this to the list!')
+
+# <codecell>
+
+mylist
+
+# <codecell>
+
+mylist.append()
+
+# <codecell>
+
 import os
 import random
 import bs4
