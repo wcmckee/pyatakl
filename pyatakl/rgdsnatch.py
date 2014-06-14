@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
-# <markdowncell>
+# <headingcell level=4>
 
-# rgdsnatch: Reddit script to get posts and data from RedditGetsDrawn and post to artcontroldrawsyou
+# rgdsnatch: script to get post data from RedditGetsDrawn and post to artcontroldrawsyou
 
 # <codecell>
 
@@ -104,6 +104,18 @@ rgdautoz = str(ransev.author)
 
 # <codecell>
 
+rgdsubred = str(ransev.subreddit)
+
+# <codecell>
+
+sutit = ('[' + rgdsubred + ']')
+
+# <codecell>
+
+sutit
+
+# <codecell>
+
 rgdaqwew = ('[RGD]' + rgdautoz)
 
 # <codecell>
@@ -147,7 +159,39 @@ comrgd
 
 # <codecell>
 
-ady.submit(rgdautoz, (rgdaqwew, comrgd))
+import time
+
+# <codecell>
+
+loctime = time.localtime()
+
+# <codecell>
+
+loctime.tm_mday
+
+# <codecell>
+
+loctime.tm_mon
+
+# <codecell>
+
+thedat = (str(loctime.tm_mday) + '/' + str(loctime.tm_mon))
+
+# <codecell>
+
+thedat
+
+# <codecell>
+
+mixtut = (thedat + sutit + rgdautoz)
+
+# <codecell>
+
+loctime
+
+# <codecell>
+
+ady.submit(mixtut , (rgdaqwew, comrgd))
 
 # <rawcell>
 
@@ -162,7 +206,7 @@ ady.submit(rgdautoz, (rgdaqwew, comrgd))
 #                  str(newa.url) + 
 #                  '" /></a>')
 #     #ophtml.write(htmstr)
-#     ady.submit(('[RGD]' + newa.author), newa.url)
+#     #ady.submit(('[RGD]' + newa.author), newa.url)
 #     print newa.author
 #     #print newa.media
 #     ophtml.write(htmstr)
