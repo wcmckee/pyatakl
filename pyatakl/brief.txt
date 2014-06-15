@@ -1,0 +1,14 @@
+ok
+we go to website - basically - sorry@
+
+
+
+localhost/redirect.py? everythingelse.html
+referal header that was in the request
+if referal header:
+print html 
+then javascript function to refresh and go to original url.
+if no referal header:
+generate htm header 302 redirect to that url. 
+ 
+

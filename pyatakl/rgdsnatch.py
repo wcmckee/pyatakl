@@ -62,7 +62,7 @@ print thesubraz
 
 # <codecell>
 
-rd = r.get_subreddit(str(thesubraz))
+rd = r.get_subreddit('redditgetsdrawn')
 
 # <codecell>
 
@@ -276,6 +276,10 @@ for con in mincom:
     #print con.body
     minels.append(con)
     dausr.update({str(con.id): str(con.body)})
+
+# <codecell>
+
+minels
 
 # <codecell>
 
