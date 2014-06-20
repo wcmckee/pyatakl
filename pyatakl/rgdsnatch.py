@@ -24,7 +24,7 @@ r = praw.Reddit(user_agent='rgdsnatch')
 
 # <codecell>
 
-r.login('artcontrol', 'newfile123')
+r.login('artcontrol', 'zipit123')
 
 # <codecell>
 

@@ -46,7 +46,7 @@ r = praw.Reddit(user_agent='redditgetsdrawn blog post')
 
 # <codecell>
 
-rd = r.get_subreddit('redditgetsdrawn')
+rd = r.get_subreddit('gonemild')
 
 # <codecell>
 
@@ -54,7 +54,7 @@ rd.url
 
 # <codecell>
 
-rd.created
+Ãrd.created
 
 # <codecell>
 

@@ -42,10 +42,6 @@ headon
 
 # <codecell>
 
-headon.keys()
-
-# <codecell>
-
 print headon['server']
 
 # <codecell>
