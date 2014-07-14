@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 # <nbformat>3.0</nbformat>
 
-# <headingcell level=4>
-
-# rgdsnatch: script to get post data from RedditGetsDrawn and post to artcontroldrawsyou
-
 # <codecell>
 
 import os
@@ -16,7 +12,7 @@ import praw
 
 # <codecell>
 
-os.chdir('/home/wcmckee/rgd')
+#os.chdir('~/.rgd')
 
 # <codecell>
 
@@ -116,7 +112,7 @@ sutit
 
 # <codecell>
 
-rgdaqwew = ('[RGD]' + rgdautoz)
+rgdaqwew = ('xpost[RGD]' + rgdautoz)
 
 # <codecell>
 
@@ -140,10 +136,11 @@ linkdict = {}
 
 # <codecell>
 
-ophtml = open('index.html', 'w')
+ophtml = open('index.html', 'a')
 
 # <codecell>
 
+ls
 
 # <codecell>
 
@@ -320,12 +317,6 @@ minelsz = []
 # <codecell>
 
 #mina.body
-
-# <codecell>
-
-
-# <codecell>
-
 
 # <codecell>
 

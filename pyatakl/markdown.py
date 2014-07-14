@@ -33,13 +33,30 @@ def read_paragraphs():
 if __name__ == '__main__':
     user_input = read_paragraphs()
     html_output = generate_html(user_input['title'], user_input['paragraphs'])
-    with tempfile.NamedTemporaryFile(mode='w+t', suffix='.html', delete=False) as out:
+    with open('test.html', 'w') as out:
         # HACK: This is silly, but dominate doesn't provide a way to change the
         # number of spaces used for a tab, but since it gives us exactly half
         # as many as we want, we can double-up on spaces at start of line and
         # get what we want
-        out.write(re.sub(r'^(\s*)', r'\1\1', html_output, flags=re.MULTILINE))
+        out.write(re.sub(r'^\s*', r'\1\1', html_output, flags=re.MULTILINE))
     webbrowser.open(out.name)
+
+# <codecell>
+
+print dominate.tags.html(body(p('hello world')))
+
+# <codecell>
+
+list = ul()
+for item in range(4):
+    list += li('Item #', item)
+print list
+
+
+# <codecell>
+
+ophtm = open('test.html', 'r')
+ophtm.read()
 
 # <codecell>
 
