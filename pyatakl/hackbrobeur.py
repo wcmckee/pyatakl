@@ -121,7 +121,7 @@ os.chdir()
 for gitbl in dlrepo:
     print (colored.red('Downloading - ' + (colored.blue('wcmckee') + ' - ' + gitbl)))
     #git.Git().clone("https://github.com/wcmckee/" + gitbl)
-    #envoy.run('git clone https://github.com/wcmckee/' + gitbl )
+    envoy.run('git clone https://github.com/wcmckee/' + gitbl )
     t = envoy.run('df')
     t.std_out
     print ('Download complete. Waiting 5 secs till the next')
@@ -215,4 +215,10 @@ import envoy
 # <codecell>
 
 import clon
+
+# <codecell>
+
+
+# <codecell>
+
 
